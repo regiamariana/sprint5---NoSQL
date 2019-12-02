@@ -1,0 +1,21 @@
+Ordene pela data de inclusão.
+Ordene pelas descrições.
+Ordene pela quantidade de caracteres das descrições.
+Procure somente registros aonde o dia da data de inclusão seja igual a 01.
+
+
+1. db.tasks.find().sort({dataInclusao: 1}).pretty()
+2. 
+
+
+sort({_id: 1 (crescente)})
+sort({_id: -1 (decrescente)}).limit(2)
+
+
+
+db.tasks.find({descricao: {$size: 1}}).pretty()
+db.tasks.find({$where: "this.dataInclusao.length == 01"}).pretty()
+db.tasks.find().sort({descricao: {$strLenCP: 1} }).pretty()
+
+ db.tasks.find().sort({descricao: 1}).pretty()
+> db.tasks.find().sort({dataInclusao: 1}).pretty()

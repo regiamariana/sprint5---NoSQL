@@ -1,0 +1,1 @@
+db.tasks.find({titulo: { $in : ["Titulo A", "Titulo B"] }}).pretty
