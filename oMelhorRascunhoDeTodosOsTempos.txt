@@ -1,0 +1,57 @@
+discolocal > Arquivos de programas > MongoDB > Server > 4.0 > bin > cmd no bin
+
+> mongo
+> show dbs
+> use t_todo
+> show collections (tabela?)
+
+documento = 
+{
+	_id: ObjectId(),
+	nome: seila,
+
+}
+
+>db.tasks.find().pretty() - sem filtro - cRud - "select"
+>db.tasks.insert({ titulo: "Titulo P", descricao: "Exemplo" })
+>db.tasks.find({}).sort({_id: -1}).limit(2).pretty() - com filtro
+>db.tasks.insert({nome: "Helena", sobrenome: "Rodovia"}) - funciona adicionando informação q nao existe (sobrenome)
+>db.tasks.insert({titulo: "Titulo U", descricao: "Java", concuida: true})
+>db.tasks.insert({titulo: "Titulo R", descricao: "Oracle", dataInclusao: Date()}) - data atual
+>db.tasks.insertMany([{titulo: "Titulo W", descricao: "C", concuida: true}, {titulo: "Titulo X", descricao: "Ruby", dataInclusao: Date()}]) - inserir + de 1 ao memso tempo
+
+
+create - insert
+read - find
+update - update
+
+
+>db.tasks.update({titulo: "Titulo O"}, {descricao: "Cshark"}) - JEITO ERRADÍSSIMOOOOO
+>db.tasks.update({titulo: "Titulo U"}, {$set: {descricao: "Cshark"}}) - Jeito errado
+>db.tasks.update({_id : ObjectId("5de69891319188f2a94a84e7")}, {$set: {titulo: "Titulo Uava", descricao: "Java Best"}}) - jeito certo
+>db.tasks.update({"_id" : ObjectId("5de69920319188f2a94a84e9")}, {$set: {titulo: "Titulo Zsharp", concuido: false}})
+>db.tasks.update({"_id" : ObjectId("5de69950319188f2a94a84ea")}, {$set: {titulo: "Titulo Pirebase", descricao: "Fireb4se"}})
+>db.tasks.remove({"_id" : ObjectId("5de69920319188f2a94a84e9")}) - apaga o doc inteiro
+>db.tasks.remove({ }) - delete sem where
+>db.dropDatabase() - n preciso nem falar nada neh
+> use t_todo
+>db.createCollection("tasks")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
