@@ -37,8 +37,9 @@ update - update
 > use t_todo
 >db.createCollection("tasks")
 
+*******para conectar com um arquivo json*********
 
-
+mongoimport --db dbName --collection collectionName --file fileName.json --jsonArray
 
 
 

@@ -1,0 +1,5 @@
+>mongo
+>use t_gufos
+>db.createCollection("mapas")
+>show collections
+>
